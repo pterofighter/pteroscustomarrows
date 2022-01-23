@@ -1,6 +1,7 @@
 package com.pterofighter.pteroscustomarrows.entity.custom;
 
 import com.pterofighter.pteroscustomarrows.PterosCustomArrowsMod;
+import com.pterofighter.pteroscustomarrows.config.ArrowsConfig;
 import com.pterofighter.pteroscustomarrows.entity.ModEntityTypes;
 import net.minecraft.network.protocol.Packet;
 import net.minecraft.world.entity.Entity;
@@ -25,15 +26,15 @@ public class ArrowRainArrowEntity extends AbstractArrow
     //we want the pierceLevel to be at least 1 so the arrow won't dissapear when hitting an entity a
     private int pierceLevel = 3;
     //how long the arrow rain will last in ticks
-    private int duration = 600;
+    private int duration = ArrowsConfig.arrowRainDuration.get();
     //how many arrows will be fired per tick during arrow rain
-    private int arrowsPerTick = 7;
+    private int arrowsPerTick = ArrowsConfig.arrowRainArrowsFired.get();
     //how many blocks above where the arrow land, where the arrow rain will start
-    private int arrowRainHeight = 69;
+    private int arrowRainHeight = ArrowsConfig.arrowRainHeight.get();
     //whether the arrows spawned by arrow rain will scale power enchantment
-    private boolean scaleWithPowerEnchantment = true;
+    private boolean scaleWithPowerEnchantment = ArrowsConfig.arrowRainScaleWithPower.get();
     //whether the arrows spawned by arrow rain will scale with flame enchantment
-    private boolean scaleWithFlameEnchantment = true;
+    private boolean scaleWithFlameEnchantment = ArrowsConfig.arrowRainScaleWithFire.get();
     private boolean startArrowRain = false;
     private boolean isFireArrows = false;
 

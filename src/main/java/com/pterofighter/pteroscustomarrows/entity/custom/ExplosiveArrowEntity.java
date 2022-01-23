@@ -1,5 +1,6 @@
 package com.pterofighter.pteroscustomarrows.entity.custom;
 
+import com.pterofighter.pteroscustomarrows.config.ArrowsConfig;
 import com.pterofighter.pteroscustomarrows.item.ModItems;
 import net.minecraft.network.protocol.Packet;
 import net.minecraft.world.entity.EntityType;
@@ -18,26 +19,40 @@ public class ExplosiveArrowEntity extends AbstractArrow
 {
     private LivingEntity shooter;
 
-    private float explosionRadius = 4.0f;
-    private int groundExplodeTimeDelay = 60;
+    private double ExplosionRadiusDouble = ArrowsConfig.explosionArrowRadius.get();
+    private float explosionRadius = (float) ExplosionRadiusDouble;
+    private int groundExplodeTimeDelay = ArrowsConfig.explosionArrowGroundExplodeDelay.get();
     private Explosion.BlockInteraction explosionInteraction = Explosion.BlockInteraction.BREAK;
-    private boolean scaleWithFlame = true;
+    private boolean breakBlocks = ArrowsConfig.explosionArrowBreakBlocks.get();
+    private boolean scaleWithFlame = ArrowsConfig.explosionArrowScaleWithFlame.get();
     private boolean isFireArrows = false;
 
     public ExplosiveArrowEntity(EntityType<ExplosiveArrowEntity> entityType, Level world)
     {
         super(entityType, world);
+        if(!breakBlocks)
+        {
+            explosionInteraction = Explosion.BlockInteraction.NONE;
+        }
     }
 
     public ExplosiveArrowEntity(EntityType<ExplosiveArrowEntity> entityType, double x, double y, double z, Level world)
     {
         super(entityType, x, y, z, world);
+        if(!breakBlocks)
+        {
+            explosionInteraction = Explosion.BlockInteraction.NONE;
+        }
     }
 
     public ExplosiveArrowEntity(EntityType<ExplosiveArrowEntity> entityType, LivingEntity shooter, Level world)
     {
         super(entityType, shooter, world);
         this.shooter = shooter;
+        if(!breakBlocks)
+        {
+            explosionInteraction = Explosion.BlockInteraction.NONE;
+        }
     }
 
     @Override

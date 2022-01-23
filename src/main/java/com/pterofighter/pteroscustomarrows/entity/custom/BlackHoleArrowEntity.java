@@ -1,5 +1,6 @@
 package com.pterofighter.pteroscustomarrows.entity.custom;
 
+import com.pterofighter.pteroscustomarrows.config.ArrowsConfig;
 import net.minecraft.network.protocol.Packet;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.LivingEntity;
@@ -21,14 +22,14 @@ public class BlackHoleArrowEntity extends AbstractArrow
     private LivingEntity shooter;
     private int pierceLevel = 3;
     private int life = 0;
-    private int duration = 300;
+    private int duration = ArrowsConfig.blackHoleDuration.get();
     private boolean startSuck = false;
     //the radius in which entities will be pulled into the arrow
-    private double suckRange = 8.0D;
+    private double suckRange = ArrowsConfig.blackHoleSuckRange.get();
     //how strong the pull strength of the arrow will be;
-    private double suckStrength = 0.3D;
+    private double suckStrength = ArrowsConfig.blackHoleSuckStrength.get();
     //how many ticks the arrow will pull entities in
-    private int suckInterval = 3;
+    private int suckInterval = ArrowsConfig.blackHoleSuckInterval.get();
 
     public BlackHoleArrowEntity(EntityType<BlackHoleArrowEntity> entityType, Level world)
     {

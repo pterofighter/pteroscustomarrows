@@ -1,5 +1,6 @@
 package com.pterofighter.pteroscustomarrows.entity.custom;
 
+import com.pterofighter.pteroscustomarrows.config.ArrowsConfig;
 import com.pterofighter.pteroscustomarrows.entity.ModEntityTypes;
 import net.minecraft.network.protocol.Packet;
 import net.minecraft.world.entity.EntityType;
@@ -16,12 +17,12 @@ public class ScatterArrowEntity extends AbstractArrow
 
     private LivingEntity shooter;
     private int despawnTime = 60;
-    private int arrowsFired = 13;
-    private int inaccuracy = 10;
-    private double baseDamage = 2.0D;
-    private boolean scaleWithPower = true;
-    private boolean scaleWithFlame = true;
-    private boolean scaleWithKnockBack = true;
+    private int arrowsFired = ArrowsConfig.scatterArrowArrowsFired.get();
+    private int inaccuracy = ArrowsConfig.scatterArrowInaccuracy.get();
+    private double baseDamage = ArrowsConfig.scatterArrowBaseDamage.get();
+    private boolean scaleWithPower = ArrowsConfig.scatterArrowScaleWithPower.get();
+    private boolean scaleWithFlame = ArrowsConfig.scatterArrowScaleWithFlame.get();
+    private boolean scaleWithKnockBack = ArrowsConfig.scatterArrowScaleWithPunch.get();
 
 
     public ScatterArrowEntity(EntityType<ScatterArrowEntity> entityType, Level world)

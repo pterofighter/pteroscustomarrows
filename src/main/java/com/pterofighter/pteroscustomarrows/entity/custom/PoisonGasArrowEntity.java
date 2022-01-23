@@ -1,5 +1,6 @@
 package com.pterofighter.pteroscustomarrows.entity.custom;
 
+import com.pterofighter.pteroscustomarrows.config.ArrowsConfig;
 import net.minecraft.core.BlockPos;
 import net.minecraft.network.protocol.Packet;
 import net.minecraft.world.effect.MobEffectInstance;
@@ -18,14 +19,15 @@ import net.minecraftforge.network.NetworkHooks;
 public class PoisonGasArrowEntity extends AbstractArrow
 {
 
-    private int duration = 600;
-    private float radius = 10;
+    private int duration = ArrowsConfig.poisonGasArrowDuration.get();
+    private double radiusDouble = ArrowsConfig.poisonGasArrowRadius.get();
+    private float radius = (float) radiusDouble;
     //how many ticks before the gas will take effect
-    private int waitTime = 30;
+    private int waitTime = ArrowsConfig.poisonGasArrowWaitTime.get();
     //how long the poison will after leaving the poison cloud
-    private int poisonDuration = 300;
-    private int poisonLevel = 0;
-    private int harmLevel = 0;
+    private int poisonDuration = ArrowsConfig.poisonGasArrowPoisonDuration.get();
+    private int poisonLevel = ArrowsConfig.poisonGasArrowPoisonLevel.get();
+    private int harmLevel = ArrowsConfig.poisonGasArrowHarmLevel.get();
 
 
     public PoisonGasArrowEntity(EntityType<PoisonGasArrowEntity> entityType, Level world)

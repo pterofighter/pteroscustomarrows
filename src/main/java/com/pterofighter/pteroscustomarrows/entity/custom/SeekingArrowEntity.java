@@ -1,5 +1,6 @@
 package com.pterofighter.pteroscustomarrows.entity.custom;
 
+import com.pterofighter.pteroscustomarrows.config.ArrowsConfig;
 import net.minecraft.network.protocol.Packet;
 import net.minecraft.world.entity.*;
 import net.minecraft.world.entity.ai.targeting.TargetingConditions;
@@ -20,14 +21,14 @@ public class SeekingArrowEntity extends AbstractArrow
 {
 
     private LivingEntity shooter;
-    private int despawnTime = 600;
-    private double targetingRange = 100.0D;
-    private int targetingWaitTime = 10;
+    private int despawnTime = ArrowsConfig.seekerArrowDespawnTime.get();
+    private double targetingRange = ArrowsConfig.seekerArrowTargetingRange.get();
+    private int targetingWaitTime = ArrowsConfig.seekerArrowTargetingWaitTime.get();
     //how much damage to add once the arrow starts targeting to make up for reduced damage of lost velocity from firing
-    private double targetingDamageBonus = 4.0D;
+    private double targetingDamageBonus = ArrowsConfig.seekerArrowTargetingDamageBonus.get();
     private boolean addedTargetingDamageBonus = false;
     //determines if arrows bounces off blocks or shields
-    private boolean arrowsBounces = true;
+    private boolean arrowsBounces = ArrowsConfig.seekerArrowArrowsBounce.get();
 
     public SeekingArrowEntity(EntityType<SeekingArrowEntity> entityType, Level world)
     {

@@ -1,14 +1,18 @@
 package com.pterofighter.pteroscustomarrows;
 
+import com.pterofighter.pteroscustomarrows.config.Config;
 import com.pterofighter.pteroscustomarrows.entity.ModEntityTypes;
 import com.pterofighter.pteroscustomarrows.item.ModItems;
 import com.pterofighter.pteroscustomarrows.entity.render.*;
 import net.minecraft.client.renderer.entity.EntityRenderers;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;
+import net.minecraftforge.fml.ModLoadingContext;
 import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.fml.config.ModConfig;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
+import net.minecraftforge.fml.loading.FMLPaths;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -29,6 +33,10 @@ public class PterosCustomArrowsMod
         ModEntityTypes.register(eventBus);
 
         eventBus.addListener(this::setupClient);
+
+        ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, Config.config);
+
+        Config.loadConfig(Config.config, FMLPaths.CONFIGDIR.get().resolve("pteroscustomarrows-common.toml").toString());
 
         // Register ourselves for server and other game events we are interested in
         MinecraftForge.EVENT_BUS.register(this);

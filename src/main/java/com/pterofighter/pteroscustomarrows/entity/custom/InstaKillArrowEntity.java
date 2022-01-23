@@ -1,5 +1,6 @@
 package com.pterofighter.pteroscustomarrows.entity.custom;
 
+import com.pterofighter.pteroscustomarrows.config.ArrowsConfig;
 import com.pterofighter.pteroscustomarrows.item.ModItems;
 import net.minecraft.core.BlockPos;
 import net.minecraft.network.protocol.Packet;
@@ -15,12 +16,12 @@ import net.minecraftforge.network.NetworkHooks;
 public class InstaKillArrowEntity extends AbstractArrow
 {
 
-    private float arrowVelocity = 1000;
-    private boolean arrowBreakBlocks = true;
+    private float arrowVelocity = ArrowsConfig.instakillArrowVelocity.get();
+    private boolean arrowBreakBlocks = ArrowsConfig.instakillArrowBreakBlocks.get();
     private int arrowLifeTime = 400;
-    private int pierceLevel = 10;
-    private int baseDamage = 500;
-    private boolean isNoGravity = true;
+    private int pierceLevel = ArrowsConfig.instakillArrowPierceLevel.get();
+    private double baseDamage = ArrowsConfig.instakillArrowBaseDamage.get();
+    private boolean isNoGravity = ArrowsConfig.instakillArrowIsNoGravity.get();
 
     public InstaKillArrowEntity(EntityType<InstaKillArrowEntity> entityType, Level world)
     {

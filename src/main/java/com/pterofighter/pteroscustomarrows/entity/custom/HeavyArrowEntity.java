@@ -1,6 +1,7 @@
 package com.pterofighter.pteroscustomarrows.entity.custom;
 
 
+import com.pterofighter.pteroscustomarrows.config.ArrowsConfig;
 import com.pterofighter.pteroscustomarrows.item.ModItems;
 import net.minecraft.network.protocol.Packet;
 import net.minecraft.world.entity.EntityType;
@@ -12,7 +13,7 @@ import net.minecraftforge.network.NetworkHooks;
 
 public class HeavyArrowEntity extends AbstractArrow
 {
-    private double baseDamage = 3.0D;
+    private double baseDamage = ArrowsConfig.heavyArrowBaseDamage.get();
 
     public HeavyArrowEntity(EntityType<HeavyArrowEntity> entityType, Level world)
     {
