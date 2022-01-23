@@ -34,9 +34,9 @@ public class PterosCustomArrowsMod
 
         eventBus.addListener(this::setupClient);
 
-        ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, Config.config);
+        ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, Config.config, "pteroscustomarrows-common.toml");
 
-        Config.loadConfig(Config.config, FMLPaths.CONFIGDIR.get().resolve("pteroscustomarrows-common.toml").toString());
+//        Config.loadConfig(Config.config, FMLPaths.CONFIGDIR.get().resolve("pteroscustomarrows-common.toml").toString());
 
         // Register ourselves for server and other game events we are interested in
         MinecraftForge.EVENT_BUS.register(this);

@@ -57,18 +57,15 @@ public class ArrowsConfig
     public static ForgeConfigSpec.BooleanValue seekerArrowArrowsBounce;
 
 
-
-
-
     public static void init(ForgeConfigSpec.Builder config)
     {
-        config.comment("Arrow Rain Config");
+//        config.comment("Arrow Rain Config");
 
         arrowRainArrowsFired = config.comment("Number of arrows fired per tick in arrow rain")
                 .defineInRange("arrowRainArrowsFired", 7,1,100);
 
         arrowRainScaleWithFire = config.comment("Makes the arrow rain scale with the flame enchantment")
-                .define(".arrowRainScaleWithFire", true);
+                .define("arrowRainScaleWithFire", true);
 
         arrowRainScaleWithPower = config.comment("Makes the arrow rain scale with power enchantment")
                 .define("arrowRainScaleWithPower", true);
@@ -79,7 +76,7 @@ public class ArrowsConfig
         arrowRainHeight = config.comment("How many blocks above from where the arrow landed will the arrows come from")
                 .defineInRange("arrowRainHeight", 69,1,1000);
 
-        config.comment("Black Hole Arrow Config");
+//        config.comment("Black Hole Arrow Config");
 
         blackHoleDuration = config.comment("How man ticks the sucking effect will last for black hole arrow")
                 .defineInRange("blackHoleDuration", 300,1,100000);
@@ -91,9 +88,9 @@ public class ArrowsConfig
                 .defineInRange("blackHoleSuckStrength", 0.3,0,1000);
 
         blackHoleSuckInterval = config.comment("how many ticks in between the black hole arrow will pull an entity")
-                .defineInRange("blackHoleDuration", 3,0,10000);
+                .defineInRange("blackHoleSuckInterval", 3,0,10000);
 
-        config.comment("Explosive Arrow Config");
+//        config.comment("Explosive Arrow Config");
 
         explosionArrowBreakBlocks = config.comment("determines if explosion arrow will break blocks ")
                 .define("explosiveArrowBreakBlocks", true);
@@ -107,12 +104,12 @@ public class ArrowsConfig
         explosionArrowScaleWithFlame = config.comment("determines if explosion arrow, explosion will cause flame if fired by flame bow")
                 .define("explosionArrowScaleWithFlame", true);
 
-        config.comment("Heavy Arrow Config");
+//        config.comment("Heavy Arrow Config");
 
         heavyArrowBaseDamage = config.comment("Determines the base damage of the heavy arrow")
                 .defineInRange("heavyArrowBaseDamage", 3.0D,0,100000);
 
-        config.comment("InstaKill Arrow Config");
+//        config.comment("InstaKill Arrow Config");
 
         instakillArrowVelocity = config.comment("Determines the velocity of the instakill arrow")
                 .defineInRange("instakillArrowVelocity", 1000,0,100000);
@@ -129,7 +126,7 @@ public class ArrowsConfig
         instakillArrowIsNoGravity = config.comment("Determines if the instakill arrow will fly straight")
                 .define("instakillArrowIsNoGravity", true);
 
-        config.comment("Poison Gas Arrow Config");
+//        config.comment("Poison Gas Arrow Config");
 
         poisonGasArrowDuration = config.comment("Determines how many ticks the effect cloud will last")
                 .defineInRange("poisonGasArrowDuration", 600,0,100000);
@@ -149,7 +146,7 @@ public class ArrowsConfig
         poisonGasArrowHarmLevel = config.comment("Determines what level the harm will be")
                 .defineInRange("poisonGasArrowHarmLevel", 0,0,10);
 
-        config.comment("Scatter Arrow Config");
+//        config.comment("Scatter Arrow Config");
 
         scatterArrowArrowsFired = config.comment("Determines how many arrows will be fired by scatter arrow")
                 .defineInRange("scatterArrowArrowsFired", 13,1,100);
@@ -169,7 +166,7 @@ public class ArrowsConfig
         scatterArrowScaleWithPunch = config.comment("Determines if scatter arrow scales with punch enchantment")
                 .define("scatterArrowScaleWithPunch", true);
 
-        config.comment("Seeker Arrow Config");
+//        config.comment("Seeker Arrow Config");
 
         seekerArrowTargetingRange = config.comment("Determines the block range in which the seeker arrow will seek entities")
                 .defineInRange("seekerArrowTargetingRange", 100.0D,0,100000);
@@ -178,15 +175,13 @@ public class ArrowsConfig
                 .defineInRange("seekerArrowDespawnTime", 600,0,100000);
 
         seekerArrowTargetingWaitTime = config.comment("Determines how many ticks seeker arrows will wait to seek after being fired")
-                .defineInRange("seekerArrowDespawnTime", 10,0,100000);
+                .defineInRange("seekerArrowTargetingWaitTime", 10,0,100000);
 
         seekerArrowTargetingDamageBonus = config.comment("Determines the damage bonus seeker arrows get when they started seeking entities")
                 .defineInRange("seekerArrowTargetingDamageBonus", 4.0D,0,100000);
 
         seekerArrowArrowsBounce = config.comment("Determines if seeker arrows will bounce off of blocks instead of sticking into them")
                 .define("seekerArrowArrowsBounce", true);
-
-
 
     }
 }
