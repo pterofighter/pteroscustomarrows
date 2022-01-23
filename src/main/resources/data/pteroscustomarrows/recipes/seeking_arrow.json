@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern" : [
+    "T",
+    "A"
+  ],
+  "key": {
+    "T": {
+      "item":"minecraft:ender_eye"
+    },
+    "A": {
+      "item":"minecraft:arrow"
+    }
+  },
+  "result":{
+    "item": "pteroscustomarrows:seeking_arrow"
+  }
+}

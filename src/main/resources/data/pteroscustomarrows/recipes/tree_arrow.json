@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern" : [
+    "T",
+    "A",
+    "G"
+  ],
+  "key": {
+    "T": {
+      "item":"minecraft:oak_sapling"
+    },
+    "A": {
+      "item":"minecraft:arrow"
+    },
+    "G": {
+      "item":"minecraft:bone_meal"
+    }
+  },
+  "result":{
+    "item": "pteroscustomarrows:tree_arrow"
+  }
+}

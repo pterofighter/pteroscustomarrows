@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern" : [
+    "AAA",
+    "AGA",
+    "AAA"
+  ],
+  "key": {
+    "A": {
+      "item":"minecraft:arrow"
+    },
+    "G": {
+      "item":"minecraft:string"
+    }
+  },
+  "result":{
+    "item": "pteroscustomarrows:scatter_arrow"
+  }
+}

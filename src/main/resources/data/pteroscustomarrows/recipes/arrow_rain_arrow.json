@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern" : [
+    "T",
+    "A",
+    "G"
+  ],
+  "key": {
+    "T": {
+      "item":"minecraft:diamond"
+    },
+    "A": {
+      "item":"minecraft:arrow"
+    },
+    "G": {
+      "item":"minecraft:ghast_tear"
+    }
+  },
+  "result":{
+    "item": "pteroscustomarrows:arrow_rain_arrow"
+  }
+}

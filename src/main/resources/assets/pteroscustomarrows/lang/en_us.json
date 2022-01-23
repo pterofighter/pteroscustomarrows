@@ -1,0 +1,18 @@
+{
+  "item.pteroscustomarrows.explosive_arrow": "Explosive Arrow",
+  "item.pteroscustomarrows.lightning_arrow": "Lightning Arrow",
+  "item.pteroscustomarrows.instakill_arrow": "Instakill Arrow",
+  "item.pteroscustomarrows.arrow_rain_arrow": "Arrow Rain Arrow",
+  "item.pteroscustomarrows.short_lived_arrow": "arrow",
+  "item.pteroscustomarrows.black_hole_arrow": "Black Hole Arrow",
+  "item.pteroscustomarrows.heavy_arrow": "Heavy Arrow",
+  "item.pteroscustomarrows.poison_gas_arrow": "Poison Gas Arrow",
+  "item.pteroscustomarrows.scatter_arrow": "Scatter Arrow",
+  "item.pteroscustomarrows.seeking_arrow": "Seeking Arrow",
+  "item.pteroscustomarrows.tree_arrow": "Tree Arrow",
+
+
+
+
+  "itemGroup.pteros_custom_arrows_tab": "Ptero's Custom Arrows Mod Tab"
+}

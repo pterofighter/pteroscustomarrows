@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern" : [
+    "III",
+    " A "
+  ],
+  "key": {
+    "I": {
+      "item":"minecraft:iron_nugget"
+    },
+    "A": {
+      "item":"minecraft:arrow"
+    }
+  },
+  "result":{
+    "item": "pteroscustomarrows:heavy_arrow"
+  }
+}
