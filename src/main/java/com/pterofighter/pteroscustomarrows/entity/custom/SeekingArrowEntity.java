@@ -22,6 +22,7 @@ public class SeekingArrowEntity extends AbstractArrow
 
     private LivingEntity shooter;
     private int despawnTime = ArrowsConfig.seekerArrowDespawnTime.get();
+
     private double targetingRange = ArrowsConfig.seekerArrowTargetingRange.get();
     private int targetingWaitTime = ArrowsConfig.seekerArrowTargetingWaitTime.get();
     //how much damage to add once the arrow starts targeting to make up for reduced damage of lost velocity from firing

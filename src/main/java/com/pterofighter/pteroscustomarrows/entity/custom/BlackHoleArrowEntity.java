@@ -5,6 +5,7 @@ import net.minecraft.network.protocol.Packet;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.ai.targeting.TargetingConditions;
+import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.projectile.AbstractArrow;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
@@ -82,6 +83,12 @@ public class BlackHoleArrowEntity extends AbstractArrow
                     Vec3 vec3 = new Vec3(this.getX() - entity.getX(), this.getY() - entity.getY(),
                             this.getZ() - entity.getZ());
                     entity.setDeltaMovement(entity.getDeltaMovement().add(vec3.normalize().scale(suckStrength)));
+                    if (entity instanceof Player)
+                    {
+                        System.out.println("BOOOOOOO!");
+//                        entity.setDeltaMovement(entity.getDeltaMovement().add(0, 10, 0));
+                        Player bob = (Player) entity;
+                    }
                 }
             }
             this.life++;
