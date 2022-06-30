@@ -85,9 +85,9 @@ public class BlackHoleArrowEntity extends AbstractArrow
                     entity.setDeltaMovement(entity.getDeltaMovement().add(vec3.normalize().scale(suckStrength)));
                     if (entity instanceof Player)
                     {
-                        System.out.println("BOOOOOOO!");
-//                        entity.setDeltaMovement(entity.getDeltaMovement().add(0, 10, 0));
-                        Player bob = (Player) entity;
+                        Player playerEntity = (Player) entity;
+                        playerEntity.hurtMarked = true;
+                        playerEntity.setDeltaMovement(entity.getDeltaMovement().add(vec3.normalize().scale(suckStrength)));
                     }
                 }
             }
