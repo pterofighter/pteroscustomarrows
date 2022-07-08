@@ -71,6 +71,11 @@ public class ModEntityTypes
                     () -> EntityType.Builder.of((EntityType.EntityFactory<HeavyArrowEntity>) HeavyArrowEntity::new,
                             MobCategory.MISC).sized(0.5F, 0.5F).build("heavy_arrow"));
 
+    public static final RegistryObject<EntityType<DecoyArrowEntity>> DECOY_ARROW =
+            ENTITY_TYPES.register("decoy_arrow",
+                    () -> EntityType.Builder.of((EntityType.EntityFactory<DecoyArrowEntity>) DecoyArrowEntity::new,
+                            MobCategory.MISC).sized(0.5F, 0.5F).build("decoy_arrow"));
+
 
 
 
