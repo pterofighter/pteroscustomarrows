@@ -56,6 +56,7 @@ public class PterosCustomArrowsMod
         EntityRenderers.register(ModEntityTypes.POISON_GAS_ARROW.get(), PoisonGasArrowRenderer::new);
         EntityRenderers.register(ModEntityTypes.HEAVY_ARROW.get(), HeavyArrowRenderer::new);
         EntityRenderers.register(ModEntityTypes.DECOY_ARROW.get(), DecoyArrowRenderer::new);
+        EntityRenderers.register(ModEntityTypes.ENDER_PEARL_ARROW.get(), EnderPearlArrowRenderer::new);
 
 
     }

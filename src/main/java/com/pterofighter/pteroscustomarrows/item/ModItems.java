@@ -48,6 +48,9 @@ public class ModItems
     public static final RegistryObject<Item> DECOY_ARROW = ITEMS.register( "decoy_arrow",
             () -> new DecoyArrowItem(new Item.Properties().tab(ModCreativeModeTab.RANDOM_STUFF_TAB)));
 
+    public static final RegistryObject<Item> ENDER_PEARL_ARROW = ITEMS.register( "ender_pearl_arrow",
+            () -> new EnderPearlArrow(new Item.Properties().tab(ModCreativeModeTab.RANDOM_STUFF_TAB)));
+
 
 
     //this tells forge the list of items we will register
