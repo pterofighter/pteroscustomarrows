@@ -49,7 +49,7 @@ public class ModItems
             () -> new DecoyArrowItem(new Item.Properties().tab(ModCreativeModeTab.RANDOM_STUFF_TAB)));
 
     public static final RegistryObject<Item> ENDER_PEARL_ARROW = ITEMS.register( "ender_pearl_arrow",
-            () -> new EnderPearlArrow(new Item.Properties().tab(ModCreativeModeTab.RANDOM_STUFF_TAB)));
+            () -> new EnderPearlArrowItem(new Item.Properties().tab(ModCreativeModeTab.RANDOM_STUFF_TAB)));
 
 
 

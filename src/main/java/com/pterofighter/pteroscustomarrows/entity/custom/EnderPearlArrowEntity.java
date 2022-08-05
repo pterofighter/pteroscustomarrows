@@ -7,13 +7,10 @@ import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.LivingEntity;
-import net.minecraft.world.entity.monster.Endermite;
 import net.minecraft.world.entity.projectile.AbstractArrow;
 import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.enchantment.EnchantmentHelper;
-import net.minecraft.world.item.enchantment.Enchantments;
-import net.minecraft.world.level.GameRules;
 import net.minecraft.world.level.Level;
+import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.phys.EntityHitResult;
 import net.minecraftforge.network.NetworkHooks;
 
@@ -42,38 +39,59 @@ public class EnderPearlArrowEntity extends AbstractArrow {
     @Override
     protected void onHitEntity(EntityHitResult pResult)
     {
+        System.out.println("ON HIT ENTITY");
         super.onHitEntity(pResult);
-        if (!this.level.isClientSide && !this.isRemoved()) {
+        if (!this.level.isClientSide && !this.isRemoved())
+        {
             Entity entity = this.getOwner();
-            if (entity instanceof ServerPlayer) {
+            System.out.println("Shooter is" + entity);
+            if (entity instanceof ServerPlayer)
+            {
+                System.out.println("Break1");
                 ServerPlayer serverplayer = (ServerPlayer)entity;
-                if (serverplayer.connection.getConnection().isConnected() && serverplayer.level == this.level && !serverplayer.isSleeping()) {
-                    net.minecraftforge.event.entity.EntityTeleportEvent.EnderPearl event = net.minecraftforge.event.ForgeEventFactory.onEnderPearlLand(serverplayer, this.getX(), this.getY(), this.getZ(), this, 5.0F);
-                    if (!event.isCanceled()) { // Don't indent to lower patch size
-                        if (this.random.nextFloat() < 0.05F && this.level.getGameRules().getBoolean(GameRules.RULE_DOMOBSPAWNING)) {
-                            Endermite endermite = EntityType.ENDERMITE.create(this.level);
-                            endermite.moveTo(entity.getX(), entity.getY(), entity.getZ(), entity.getYRot(), entity.getXRot());
-                            this.level.addFreshEntity(endermite);
-                        }
-
-                        if (entity.isPassenger()) {
-                            serverplayer.dismountTo(this.getX(), this.getY(), this.getZ());
-                        } else {
-                            entity.teleportTo(this.getX(), this.getY(), this.getZ());
-                        }
-
-                        entity.teleportTo(event.getTargetX(), event.getTargetY(), event.getTargetZ());
-                        entity.resetFallDistance();
-                        entity.hurt(DamageSource.FALL, event.getAttackDamage());
-                    } //Forge: End
-                }
-            } else if (entity != null) {
+                entity.teleportTo(this.getX(), this.getY(), this.getZ());
+                entity.resetFallDistance();
+            }
+            else if (entity != null)
+            {
+                System.out.println("Break2");
                 entity.teleportTo(this.getX(), this.getY(), this.getZ());
                 entity.resetFallDistance();
             }
 
             this.discard();
         }
+    }
+
+    @Override
+    protected void onHitBlock(BlockHitResult p_36755_) {
+        System.out.println("ON HIT BLOCK");
+        super.onHitBlock(p_36755_);
+        if (!this.level.isClientSide && !this.isRemoved())
+        {
+            Entity entity = this.getOwner();
+            System.out.println("Shooter is" + entity);
+            if (entity instanceof ServerPlayer)
+            {
+                System.out.println("Break1");
+                ServerPlayer serverplayer = (ServerPlayer)entity;
+                entity.teleportTo(this.getX(), this.getY(), this.getZ());
+                entity.resetFallDistance();
+            }
+            else if (entity != null)
+            {
+                System.out.println("Break2");
+                entity.teleportTo(this.getX(), this.getY(), this.getZ());
+                entity.resetFallDistance();
+            }
+
+            this.discard();
+        }
+    }
+
+    @Override
+    protected ItemStack getPickupItem() {
+        return new ItemStack(ModItems.ENDER_PEARL_ARROW.get());
     }
 
 
