@@ -39,33 +39,28 @@ public class EnderPearlArrowEntity extends AbstractArrow {
     @Override
     protected void onHitEntity(EntityHitResult pResult)
     {
-        System.out.println("ON HIT ENTITY");
+
         super.onHitEntity(pResult);
-        if (!this.level.isClientSide && !this.isRemoved())
+        if (!this.level.isClientSide)
         {
             Entity entity = this.getOwner();
-            System.out.println("Shooter is" + entity);
             if (entity instanceof ServerPlayer)
             {
-                System.out.println("Break1");
                 ServerPlayer serverplayer = (ServerPlayer)entity;
                 entity.teleportTo(this.getX(), this.getY(), this.getZ());
                 entity.resetFallDistance();
             }
             else if (entity != null)
             {
-                System.out.println("Break2");
                 entity.teleportTo(this.getX(), this.getY(), this.getZ());
                 entity.resetFallDistance();
             }
-
             this.discard();
         }
     }
 
     @Override
     protected void onHitBlock(BlockHitResult p_36755_) {
-        System.out.println("ON HIT BLOCK");
         super.onHitBlock(p_36755_);
         if (!this.level.isClientSide && !this.isRemoved())
         {
