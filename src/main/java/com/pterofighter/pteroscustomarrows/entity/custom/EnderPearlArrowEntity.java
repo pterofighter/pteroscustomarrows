@@ -65,17 +65,14 @@ public class EnderPearlArrowEntity extends AbstractArrow {
         if (!this.level.isClientSide && !this.isRemoved())
         {
             Entity entity = this.getOwner();
-            System.out.println("Shooter is" + entity);
             if (entity instanceof ServerPlayer)
             {
-                System.out.println("Break1");
                 ServerPlayer serverplayer = (ServerPlayer)entity;
                 entity.teleportTo(this.getX(), this.getY(), this.getZ());
                 entity.resetFallDistance();
             }
             else if (entity != null)
             {
-                System.out.println("Break2");
                 entity.teleportTo(this.getX(), this.getY(), this.getZ());
                 entity.resetFallDistance();
             }
