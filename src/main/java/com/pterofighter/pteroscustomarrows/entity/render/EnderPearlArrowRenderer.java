@@ -9,7 +9,7 @@ import net.minecraft.resources.ResourceLocation;
 public class EnderPearlArrowRenderer extends ArrowRenderer<EnderPearlArrowEntity>
 {
     public static final ResourceLocation TEXTURE = new ResourceLocation(PterosCustomArrowsMod.MOD_ID,
-            "textures/entity/black_hole_arrow.png");
+            "textures/entity/ender_pearl_arrow.png");
     public EnderPearlArrowRenderer(EntityRendererProvider.Context manager)
     {
         super(manager);
