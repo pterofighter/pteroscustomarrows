@@ -47,7 +47,11 @@ public class EnderPearlArrowEntity extends AbstractArrow {
             if (entity instanceof ServerPlayer)
             {
                 ServerPlayer serverplayer = (ServerPlayer)entity;
-                entity.teleportTo(this.getX(), this.getY(), this.getZ());
+                if (entity.isPassenger()) {
+                    serverplayer.dismountTo(this.getX(), this.getY(), this.getZ());
+                } else {
+                    entity.teleportTo(this.getX(), this.getY(), this.getZ());
+                }
                 entity.resetFallDistance();
             }
             else if (entity != null)
@@ -68,7 +72,11 @@ public class EnderPearlArrowEntity extends AbstractArrow {
             if (entity instanceof ServerPlayer)
             {
                 ServerPlayer serverplayer = (ServerPlayer)entity;
-                entity.teleportTo(this.getX(), this.getY(), this.getZ());
+                if (entity.isPassenger()) {
+                    serverplayer.dismountTo(this.getX(), this.getY(), this.getZ());
+                } else {
+                    entity.teleportTo(this.getX(), this.getY(), this.getZ());
+                }
                 entity.resetFallDistance();
             }
             else if (entity != null)
