@@ -13,7 +13,7 @@ import net.minecraftforge.registries.RegistryObject;
 public class ModEntityTypes
 {
     public static DeferredRegister<EntityType<?>> ENTITY_TYPES
-            = DeferredRegister.create(ForgeRegistries.ENTITIES, PterosCustomArrowsMod.MOD_ID);
+            = DeferredRegister.create(ForgeRegistries.ENTITY_TYPES, PterosCustomArrowsMod.MOD_ID);
 
     public static final RegistryObject<EntityType<ExplosiveArrowEntity>> EXPLOSIVE_ARROW =
             ENTITY_TYPES.register("explosive_arrow",

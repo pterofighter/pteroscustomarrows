@@ -18,7 +18,7 @@ public class ModEvents
 
             if(event.getSource().getDirectEntity() instanceof ShortLivedArrowEntity)
             {
-                LivingEntity ent = event.getEntityLiving();
+                LivingEntity ent = event.getEntity();
                 ent.invulnerableTime = 0;
             }
 
