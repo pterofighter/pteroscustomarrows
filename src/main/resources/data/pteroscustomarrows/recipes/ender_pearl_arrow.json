@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern" : [
+    "E",
+    "A"
+  ],
+  "key": {
+    "E": {
+      "item":"minecraft:ender_pearl"
+    },
+    "A": {
+      "item":"minecraft:arrow"
+    }
+  },
+  "result":{
+    "item": "pteroscustomarrows:ender_pearl_arrow"
+  }
+}
