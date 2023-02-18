@@ -1,10 +1,9 @@
 package com.pterofighter.pteroscustomarrows;
 
 import com.pterofighter.pteroscustomarrows.config.Config;
-import com.pterofighter.pteroscustomarrows.entity.ModEntityTypes;
 import com.pterofighter.pteroscustomarrows.item.ModCreativeModeTab;
 import com.pterofighter.pteroscustomarrows.item.ModItems;
-import com.pterofighter.pteroscustomarrows.entity.render.*;
+
 import net.minecraft.client.renderer.entity.EntityRenderers;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.CreativeModeTabs;
@@ -34,7 +33,7 @@ public class PterosCustomArrowsMod
         IEventBus eventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
         ModItems.register(eventBus);
-        ModEntityTypes.register(eventBus);
+//        ModEntityTypes.register(eventBus);
 
         eventBus.addListener(this::setupClient);
 
