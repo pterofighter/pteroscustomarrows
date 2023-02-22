@@ -46,6 +46,9 @@ public class PterosCustomArrowsMod
     }
 
     private void addCreative(CreativeModeTabEvent.BuildContents event) {
+        if(event.getTab() == CreativeModeTabs.SPAWN_EGGS) {
+            event.accept(ModItems.EXPLOSIVE_ARROW);
+        }
         if(event.getTab() == ModCreativeModeTab.PTEROS_CUSTOM_ARROWS_TAB) {
             event.accept(ModItems.EXPLOSIVE_ARROW);
         }
