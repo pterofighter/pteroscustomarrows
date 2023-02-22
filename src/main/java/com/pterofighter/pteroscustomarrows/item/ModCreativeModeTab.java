@@ -14,11 +14,11 @@ public class ModCreativeModeTab {
     //this is used to make a creative mode tab for our mod items
     public static CreativeModeTab PTEROS_CUSTOM_ARROWS_TAB;
 
-//    @SubscribeEvent
-//    public static void registerCreativeModeTab(CreativeModeTabEvent.Register event) {
-//        PTEROS_CUSTOM_ARROWS_TAB = event.registerCreativeModeTab(new ResourceLocation(PterosCustomArrowsMod.MOD_ID, "pteros_custom_arrows_tab"),
-//                builder -> builder.icon(() -> new ItemStack(ModItems.EXPLOSIVE_ARROW.get()))
-//                        .title(Component.translatable("creativemodetab.pteros_custom_arrows_tab")));
-//    }
+    @SubscribeEvent
+    public static void registerCreativeModeTab(CreativeModeTabEvent.Register event) {
+        PTEROS_CUSTOM_ARROWS_TAB = event.registerCreativeModeTab(new ResourceLocation(PterosCustomArrowsMod.MOD_ID, "pteros_custom_arrows_tab"),
+                builder -> builder.icon(() -> new ItemStack(ModItems.EXPLOSIVE_ARROW.get()))
+                        .title(Component.translatable("creativemodetab.pteros_custom_arrows_tab")));
+    }
 
 }

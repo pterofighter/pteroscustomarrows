@@ -43,12 +43,10 @@ public class PterosCustomArrowsMod
 
         // Register ourselves for server and other game events we are interested in
         MinecraftForge.EVENT_BUS.register(this);
+        eventBus.addListener(this::addCreative);
     }
 
     private void addCreative(CreativeModeTabEvent.BuildContents event) {
-        if(event.getTab() == CreativeModeTabs.SPAWN_EGGS) {
-            event.accept(ModItems.EXPLOSIVE_ARROW);
-        }
         if(event.getTab() == ModCreativeModeTab.PTEROS_CUSTOM_ARROWS_TAB) {
             event.accept(ModItems.EXPLOSIVE_ARROW);
         }
