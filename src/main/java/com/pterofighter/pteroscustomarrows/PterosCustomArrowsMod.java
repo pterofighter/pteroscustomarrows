@@ -1,12 +1,12 @@
 package com.pterofighter.pteroscustomarrows;
 
 import com.pterofighter.pteroscustomarrows.config.Config;
+import com.pterofighter.pteroscustomarrows.entity.ModEntityTypes;
+import com.pterofighter.pteroscustomarrows.entity.render.*;
 import com.pterofighter.pteroscustomarrows.item.ModCreativeModeTab;
 import com.pterofighter.pteroscustomarrows.item.ModItems;
 
 import net.minecraft.client.renderer.entity.EntityRenderers;
-import net.minecraft.world.item.CreativeModeTab;
-import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.CreativeModeTabEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -15,7 +15,6 @@ import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.config.ModConfig;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
-import net.minecraftforge.fml.loading.FMLPaths;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -33,8 +32,8 @@ public class PterosCustomArrowsMod
         IEventBus eventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
         ModItems.register(eventBus);
-//        ModEntityTypes.register(eventBus);
-
+        ModEntityTypes.register(eventBus);
+        eventBus.addListener(this::addCreative);
         eventBus.addListener(this::setupClient);
 
         ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, Config.config, "pteroscustomarrows-common.toml");
@@ -43,7 +42,7 @@ public class PterosCustomArrowsMod
 
         // Register ourselves for server and other game events we are interested in
         MinecraftForge.EVENT_BUS.register(this);
-        eventBus.addListener(this::addCreative);
+
     }
 
     private void addCreative(CreativeModeTabEvent.BuildContents event) {
@@ -54,7 +53,7 @@ public class PterosCustomArrowsMod
 
     private void setupClient(final FMLClientSetupEvent event)
     {
-//        EntityRenderers.register(ModEntityTypes.EXPLOSIVE_ARROW.get(), ExplosiveArrowRenderer::new);
+        EntityRenderers.register(ModEntityTypes.EXPLOSIVE_ARROW.get(), ExplosiveArrowRenderer::new);
 //        EntityRenderers.register(ModEntityTypes.LIGHTNING_ARROW.get(), LightningArrowRenderer::new);
 //        EntityRenderers.register(ModEntityTypes.INSTAKILL_ARROW.get(), InstaKillArrowRenderer::new);
 //        EntityRenderers.register(ModEntityTypes.ARROW_RAIN_ARROW.get(), ArrowRainArrowRenderer::new);

@@ -1,26 +1,25 @@
-//package com.pterofighter.pteroscustomarrows.entity;
-//
-//import com.pterofighter.pteroscustomarrows.PterosCustomArrowsMod;
-//import com.pterofighter.pteroscustomarrows.entity.custom.ArrowRainArrowEntity;
-//import com.pterofighter.pteroscustomarrows.entity.custom.*;
-//import net.minecraft.world.entity.EntityType;
-//import net.minecraft.world.entity.MobCategory;
-//import net.minecraftforge.eventbus.api.IEventBus;
-//import net.minecraftforge.registries.DeferredRegister;
-//import net.minecraftforge.registries.ForgeRegistries;
-//import net.minecraftforge.registries.RegistryObject;
-//
-//public class ModEntityTypes
-//{
-//    public static DeferredRegister<EntityType<?>> ENTITY_TYPES
-//            = DeferredRegister.create(ForgeRegistries.ENTITY_TYPES, PterosCustomArrowsMod.MOD_ID);
-//
-//    public static final RegistryObject<EntityType<ExplosiveArrowEntity>> EXPLOSIVE_ARROW =
-//            ENTITY_TYPES.register("explosive_arrow",
-//            () -> EntityType.Builder.of((EntityType.EntityFactory<ExplosiveArrowEntity>) ExplosiveArrowEntity::new,
-//                    MobCategory.MISC).sized(0.5F, 0.5F).build("explosive_arrow"));
-//
-//
+package com.pterofighter.pteroscustomarrows.entity;
+
+import com.pterofighter.pteroscustomarrows.PterosCustomArrowsMod;
+import com.pterofighter.pteroscustomarrows.entity.custom.*;
+import net.minecraft.world.entity.EntityType;
+import net.minecraft.world.entity.MobCategory;
+import net.minecraftforge.eventbus.api.IEventBus;
+import net.minecraftforge.registries.DeferredRegister;
+import net.minecraftforge.registries.ForgeRegistries;
+import net.minecraftforge.registries.RegistryObject;
+
+public class ModEntityTypes
+{
+    public static DeferredRegister<EntityType<?>> ENTITY_TYPES
+            = DeferredRegister.create(ForgeRegistries.ENTITY_TYPES, PterosCustomArrowsMod.MOD_ID);
+
+    public static final RegistryObject<EntityType<ExplosiveArrowEntity>> EXPLOSIVE_ARROW =
+            ENTITY_TYPES.register("explosive_arrow",
+            () -> EntityType.Builder.of((EntityType.EntityFactory<ExplosiveArrowEntity>) ExplosiveArrowEntity::new,
+                    MobCategory.MISC).sized(0.5F, 0.5F).build("explosive_arrow"));
+
+
 //    public static final RegistryObject<EntityType<LightningArrowEntity>> LIGHTNING_ARROW =
 //            ENTITY_TYPES.register("lightning_arrow",
 //                    () -> EntityType.Builder.of((EntityType.EntityFactory<LightningArrowEntity>) LightningArrowEntity::new,
@@ -80,12 +79,12 @@
 //            ENTITY_TYPES.register("ender_pearl_arrow",
 //                    () -> EntityType.Builder.of((EntityType.EntityFactory<EnderPearlArrowEntity>) EnderPearlArrowEntity::new,
 //                            MobCategory.MISC).sized(0.5F, 0.5F).build("ender_pearl_arrow"));
-//
-//
-//
-//
-//
-//    public static void register(IEventBus eventBus) {
-//        ENTITY_TYPES.register(eventBus);
-//    }
-//}
+
+
+
+
+
+    public static void register(IEventBus eventBus) {
+        ENTITY_TYPES.register(eventBus);
+    }
+}
