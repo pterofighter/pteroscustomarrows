@@ -39,12 +39,12 @@ public class ModEntityTypes
             ENTITY_TYPES.register("short_lived_arrow",
                     () -> EntityType.Builder.of((EntityType.EntityFactory<ShortLivedArrowEntity>) ShortLivedArrowEntity::new,
                             MobCategory.MISC).sized(0.5F, 0.5F).build("short_lived_arrow"));
-//
-//    public static final RegistryObject<EntityType<BlackHoleArrowEntity>> BLACK_HOLE_ARROW =
-//            ENTITY_TYPES.register("black_hole_arrow",
-//                    () -> EntityType.Builder.of((EntityType.EntityFactory<BlackHoleArrowEntity>) BlackHoleArrowEntity::new,
-//                            MobCategory.MISC).sized(0.5F, 0.5F).build("black_hole_arrow"));
-//
+
+    public static final RegistryObject<EntityType<BlackHoleArrowEntity>> BLACK_HOLE_ARROW =
+            ENTITY_TYPES.register("black_hole_arrow",
+                    () -> EntityType.Builder.of((EntityType.EntityFactory<BlackHoleArrowEntity>) BlackHoleArrowEntity::new,
+                            MobCategory.MISC).sized(0.5F, 0.5F).build("black_hole_arrow"));
+
 //    public static final RegistryObject<EntityType<SeekingArrowEntity>> SEEKING_ARROW =
 //            ENTITY_TYPES.register("seeking_arrow",
 //                    () -> EntityType.Builder.of((EntityType.EntityFactory<SeekingArrowEntity>) SeekingArrowEntity::new,
