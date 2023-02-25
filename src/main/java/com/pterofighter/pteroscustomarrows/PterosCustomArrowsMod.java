@@ -50,6 +50,7 @@ public class PterosCustomArrowsMod
             event.accept(ModItems.EXPLOSIVE_ARROW);
             event.accept(ModItems.ARROW_RAIN_ARROW);
             event.accept(ModItems.LIGHTNING_ARROW);
+            event.accept(ModItems.INSTAKILL_ARROW);
         }
     }
 
@@ -57,7 +58,7 @@ public class PterosCustomArrowsMod
     {
         EntityRenderers.register(ModEntityTypes.EXPLOSIVE_ARROW.get(), ExplosiveArrowRenderer::new);
         EntityRenderers.register(ModEntityTypes.LIGHTNING_ARROW.get(), LightningArrowRenderer::new);
-//        EntityRenderers.register(ModEntityTypes.INSTAKILL_ARROW.get(), InstaKillArrowRenderer::new);
+        EntityRenderers.register(ModEntityTypes.INSTAKILL_ARROW.get(), InstaKillArrowRenderer::new);
         EntityRenderers.register(ModEntityTypes.ARROW_RAIN_ARROW.get(), ArrowRainArrowRenderer::new);
         EntityRenderers.register(ModEntityTypes.SHORT_LIVED_ARROW.get(), ShortLivedArrowRenderer::new);
 //        EntityRenderers.register(ModEntityTypes.BLACK_HOLE_ARROW.get(), BlackHoleArrowRenderer::new);

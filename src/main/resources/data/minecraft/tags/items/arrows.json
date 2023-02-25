@@ -2,6 +2,8 @@
   "replace": false,
   "values": [
     "pteroscustomarrows:explosive_arrow",
-    "pteroscustomarrows:lightning_arrow"
+    "pteroscustomarrows:lightning_arrow",
+    "pteroscustomarrows:instakill_arrow",
+    "pteroscustomarrows:arrow_rain_arrow"
   ]
 }
