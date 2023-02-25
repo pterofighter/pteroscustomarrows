@@ -17,15 +17,15 @@ public class ModItems
 
     public static final RegistryObject<Item> EXPLOSIVE_ARROW = ITEMS.register( "explosive_arrow",
             () -> new ExplosiveArrowItem(new Item.Properties()));
-//
-//    public static final RegistryObject<Item> LIGHTNING_ARROW = ITEMS.register( "lightning_arrow",
-//            () -> new LightningArrowItem(new Item.Properties().tab(ModCreativeModeTab.RANDOM_STUFF_TAB)));
+
+    public static final RegistryObject<Item> LIGHTNING_ARROW = ITEMS.register( "lightning_arrow",
+            () -> new LightningArrowItem(new Item.Properties()));
 //
 //    public static final RegistryObject<Item> INSTAKILL_ARROW = ITEMS.register( "instakill_arrow",
 //            () -> new InstaKillArrowItem(new Item.Properties().tab(ModCreativeModeTab.RANDOM_STUFF_TAB)));
 //
-//    public static final RegistryObject<Item> ARROW_RAIN_ARROW = ITEMS.register( "arrow_rain_arrow",
-//            () -> new ArrowRainArrowItem(new Item.Properties().tab(ModCreativeModeTab.RANDOM_STUFF_TAB)));
+    public static final RegistryObject<Item> ARROW_RAIN_ARROW = ITEMS.register( "arrow_rain_arrow",
+            () -> new ArrowRainArrowItem(new Item.Properties()));
 //
 //    public static final RegistryObject<Item> BLACK_HOLE_ARROW = ITEMS.register( "black_hole_arrow",
 //            () -> new BlackHoleArrowItem(new Item.Properties().tab(ModCreativeModeTab.RANDOM_STUFF_TAB)));

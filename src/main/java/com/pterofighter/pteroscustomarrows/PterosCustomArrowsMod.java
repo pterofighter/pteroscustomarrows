@@ -48,16 +48,18 @@ public class PterosCustomArrowsMod
     private void addCreative(CreativeModeTabEvent.BuildContents event) {
         if(event.getTab() == ModCreativeModeTab.PTEROS_CUSTOM_ARROWS_TAB) {
             event.accept(ModItems.EXPLOSIVE_ARROW);
+            event.accept(ModItems.ARROW_RAIN_ARROW);
+            event.accept(ModItems.LIGHTNING_ARROW);
         }
     }
 
     private void setupClient(final FMLClientSetupEvent event)
     {
         EntityRenderers.register(ModEntityTypes.EXPLOSIVE_ARROW.get(), ExplosiveArrowRenderer::new);
-//        EntityRenderers.register(ModEntityTypes.LIGHTNING_ARROW.get(), LightningArrowRenderer::new);
+        EntityRenderers.register(ModEntityTypes.LIGHTNING_ARROW.get(), LightningArrowRenderer::new);
 //        EntityRenderers.register(ModEntityTypes.INSTAKILL_ARROW.get(), InstaKillArrowRenderer::new);
-//        EntityRenderers.register(ModEntityTypes.ARROW_RAIN_ARROW.get(), ArrowRainArrowRenderer::new);
-//        EntityRenderers.register(ModEntityTypes.SHORT_LIVED_ARROW.get(), ShortLivedArrowRenderer::new);
+        EntityRenderers.register(ModEntityTypes.ARROW_RAIN_ARROW.get(), ArrowRainArrowRenderer::new);
+        EntityRenderers.register(ModEntityTypes.SHORT_LIVED_ARROW.get(), ShortLivedArrowRenderer::new);
 //        EntityRenderers.register(ModEntityTypes.BLACK_HOLE_ARROW.get(), BlackHoleArrowRenderer::new);
 //        EntityRenderers.register(ModEntityTypes.SEEKING_ARROW.get(), SeekingArrowRenderer::new);
 //        EntityRenderers.register(ModEntityTypes.TREE_ARROW.get(), TreeArrowRenderer::new);

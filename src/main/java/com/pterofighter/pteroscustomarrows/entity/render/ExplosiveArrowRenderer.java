@@ -14,7 +14,6 @@ public class ExplosiveArrowRenderer extends ArrowRenderer<ExplosiveArrowEntity>
 
     public ExplosiveArrowRenderer(EntityRendererProvider.Context manager) {
         super(manager);
-        System.out.println("RIGHT HERE!");
     }
 
     @Override

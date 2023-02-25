@@ -20,25 +20,25 @@ public class ModEntityTypes
                     MobCategory.MISC).sized(0.5F, 0.5F).build("explosive_arrow"));
 
 
-//    public static final RegistryObject<EntityType<LightningArrowEntity>> LIGHTNING_ARROW =
-//            ENTITY_TYPES.register("lightning_arrow",
-//                    () -> EntityType.Builder.of((EntityType.EntityFactory<LightningArrowEntity>) LightningArrowEntity::new,
-//                            MobCategory.MISC).sized(0.5F, 0.5F).build("lightning_arrow"));
+    public static final RegistryObject<EntityType<LightningArrowEntity>> LIGHTNING_ARROW =
+            ENTITY_TYPES.register("lightning_arrow",
+                    () -> EntityType.Builder.of((EntityType.EntityFactory<LightningArrowEntity>) LightningArrowEntity::new,
+                            MobCategory.MISC).sized(0.5F, 0.5F).build("lightning_arrow"));
 //
 //    public static final RegistryObject<EntityType<InstaKillArrowEntity>> INSTAKILL_ARROW =
 //            ENTITY_TYPES.register("instakill_arrow",
 //                    () -> EntityType.Builder.of((EntityType.EntityFactory<InstaKillArrowEntity>) InstaKillArrowEntity::new,
 //                            MobCategory.MISC).sized(0.5F, 0.5F).build("instakill_arrow"));
 //
-//    public static final RegistryObject<EntityType<ArrowRainArrowEntity>> ARROW_RAIN_ARROW =
-//            ENTITY_TYPES.register("arrow_rain_arrow",
-//                    () -> EntityType.Builder.of((EntityType.EntityFactory<ArrowRainArrowEntity>) ArrowRainArrowEntity::new,
-//                            MobCategory.MISC).sized(0.5F, 0.5F).build("arrow_rain_arrow"));
+    public static final RegistryObject<EntityType<ArrowRainArrowEntity>> ARROW_RAIN_ARROW =
+            ENTITY_TYPES.register("arrow_rain_arrow",
+                    () -> EntityType.Builder.of((EntityType.EntityFactory<ArrowRainArrowEntity>) ArrowRainArrowEntity::new,
+                            MobCategory.MISC).sized(0.5F, 0.5F).build("arrow_rain_arrow"));
 //
-//    public static final RegistryObject<EntityType<ShortLivedArrowEntity>> SHORT_LIVED_ARROW =
-//            ENTITY_TYPES.register("short_lived_arrow",
-//                    () -> EntityType.Builder.of((EntityType.EntityFactory<ShortLivedArrowEntity>) ShortLivedArrowEntity::new,
-//                            MobCategory.MISC).sized(0.5F, 0.5F).build("short_lived_arrow"));
+    public static final RegistryObject<EntityType<ShortLivedArrowEntity>> SHORT_LIVED_ARROW =
+            ENTITY_TYPES.register("short_lived_arrow",
+                    () -> EntityType.Builder.of((EntityType.EntityFactory<ShortLivedArrowEntity>) ShortLivedArrowEntity::new,
+                            MobCategory.MISC).sized(0.5F, 0.5F).build("short_lived_arrow"));
 //
 //    public static final RegistryObject<EntityType<BlackHoleArrowEntity>> BLACK_HOLE_ARROW =
 //            ENTITY_TYPES.register("black_hole_arrow",

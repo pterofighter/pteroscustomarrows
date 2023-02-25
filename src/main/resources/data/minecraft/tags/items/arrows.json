@@ -2,16 +2,6 @@
   "replace": false,
   "values": [
     "pteroscustomarrows:explosive_arrow",
-    "pteroscustomarrows:lightning_arrow",
-    "pteroscustomarrows:instakill_arrow",
-    "pteroscustomarrows:arrow_rain_arrow",
-    "pteroscustomarrows:black_hole_arrow",
-    "pteroscustomarrows:seeking_arrow",
-    "pteroscustomarrows:tree_arrow",
-    "pteroscustomarrows:scatter_arrow",
-    "pteroscustomarrows:poison_gas_arrow",
-    "pteroscustomarrows:heavy_arrow",
-    "pteroscustomarrows:decoy_arrow",
-    "pteroscustomarrows:ender_pearl_arrow"
+    "pteroscustomarrows:lightning_arrow"
   ]
 }
