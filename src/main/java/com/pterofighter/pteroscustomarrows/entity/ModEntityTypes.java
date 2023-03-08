@@ -70,10 +70,10 @@ public class ModEntityTypes
                     () -> EntityType.Builder.of((EntityType.EntityFactory<HeavyArrowEntity>) HeavyArrowEntity::new,
                             MobCategory.MISC).sized(0.5F, 0.5F).build("heavy_arrow"));
 
-//    public static final RegistryObject<EntityType<EnderPearlArrowEntity>> ENDER_PEARL_ARROW =
-//            ENTITY_TYPES.register("ender_pearl_arrow",
-//                    () -> EntityType.Builder.of((EntityType.EntityFactory<EnderPearlArrowEntity>) EnderPearlArrowEntity::new,
-//                            MobCategory.MISC).sized(0.5F, 0.5F).build("ender_pearl_arrow"));
+    public static final RegistryObject<EntityType<EnderPearlArrowEntity>> ENDER_PEARL_ARROW =
+            ENTITY_TYPES.register("ender_pearl_arrow",
+                    () -> EntityType.Builder.of((EntityType.EntityFactory<EnderPearlArrowEntity>) EnderPearlArrowEntity::new,
+                            MobCategory.MISC).sized(0.5F, 0.5F).build("ender_pearl_arrow"));
 
 
 
