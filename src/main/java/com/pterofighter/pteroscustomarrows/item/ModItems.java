@@ -33,8 +33,8 @@ public class ModItems
     public static final RegistryObject<Item> SEEKING_ARROW = ITEMS.register( "seeking_arrow",
             () -> new SeekingArrowItem(new Item.Properties()));
 
-//    public static final RegistryObject<Item> TREE_ARROW = ITEMS.register( "tree_arrow",
-//            () -> new TreeArrowItem(new Item.Properties().tab(ModCreativeModeTab.RANDOM_STUFF_TAB)));
+    public static final RegistryObject<Item> TREE_ARROW = ITEMS.register( "tree_arrow",
+            () -> new TreeArrowItem(new Item.Properties()));
 //
 //    public static final RegistryObject<Item> SCATTER_ARROW = ITEMS.register( "scatter_arrow",
 //            () -> new ScatterArrowItem(new Item.Properties().tab(ModCreativeModeTab.RANDOM_STUFF_TAB)));

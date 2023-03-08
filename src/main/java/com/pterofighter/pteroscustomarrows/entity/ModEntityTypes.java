@@ -50,11 +50,11 @@ public class ModEntityTypes
                     () -> EntityType.Builder.of((EntityType.EntityFactory<SeekingArrowEntity>) SeekingArrowEntity::new,
                             MobCategory.MISC).sized(0.5F, 0.5F).build("black_hole_arrow"));
 
-//    public static final RegistryObject<EntityType<TreeArrowEntity>> TREE_ARROW =
-//            ENTITY_TYPES.register("tree_arrow",
-//                    () -> EntityType.Builder.of((EntityType.EntityFactory<TreeArrowEntity>) TreeArrowEntity::new,
-//                            MobCategory.MISC).sized(0.5F, 0.5F).build("tree_arrow"));
-//
+    public static final RegistryObject<EntityType<TreeArrowEntity>> TREE_ARROW =
+            ENTITY_TYPES.register("tree_arrow",
+                    () -> EntityType.Builder.of((EntityType.EntityFactory<TreeArrowEntity>) TreeArrowEntity::new,
+                            MobCategory.MISC).sized(0.5F, 0.5F).build("tree_arrow"));
+
 //    public static final RegistryObject<EntityType<ScatterArrowEntity>> SCATTER_ARROW =
 //            ENTITY_TYPES.register("scatter_arrow",
 //                    () -> EntityType.Builder.of((EntityType.EntityFactory<ScatterArrowEntity>) ScatterArrowEntity::new,
