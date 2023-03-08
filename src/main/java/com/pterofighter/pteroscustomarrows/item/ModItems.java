@@ -39,9 +39,9 @@ public class ModItems
     public static final RegistryObject<Item> SCATTER_ARROW = ITEMS.register( "scatter_arrow",
             () -> new ScatterArrowItem(new Item.Properties()));
 
-//    public static final RegistryObject<Item> POISON_GAS_ARROW = ITEMS.register( "poison_gas_arrow",
-//            () -> new PoisonGasArrowItem(new Item.Properties().tab(ModCreativeModeTab.RANDOM_STUFF_TAB)));
-//
+    public static final RegistryObject<Item> POISON_GAS_ARROW = ITEMS.register( "poison_gas_arrow",
+            () -> new PoisonGasArrowItem(new Item.Properties()));
+
 //    public static final RegistryObject<Item> HEAVY_ARROW = ITEMS.register( "heavy_arrow",
 //            () -> new HeavyArrowItem(new Item.Properties().tab(ModCreativeModeTab.RANDOM_STUFF_TAB)));
 //

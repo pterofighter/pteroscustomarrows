@@ -55,6 +55,7 @@ public class PterosCustomArrowsMod
             event.accept(ModItems.SEEKING_ARROW);
             event.accept(ModItems.TREE_ARROW);
             event.accept(ModItems.SCATTER_ARROW);
+            event.accept(ModItems.POISON_GAS_ARROW);
         }
     }
 
@@ -69,7 +70,7 @@ public class PterosCustomArrowsMod
         EntityRenderers.register(ModEntityTypes.SEEKING_ARROW.get(), SeekingArrowRenderer::new);
         EntityRenderers.register(ModEntityTypes.TREE_ARROW.get(), TreeArrowRenderer::new);
         EntityRenderers.register(ModEntityTypes.SCATTER_ARROW.get(), ScatterArrowRenderer::new);
-//        EntityRenderers.register(ModEntityTypes.POISON_GAS_ARROW.get(), PoisonGasArrowRenderer::new);
+        EntityRenderers.register(ModEntityTypes.POISON_GAS_ARROW.get(), PoisonGasArrowRenderer::new);
 //        EntityRenderers.register(ModEntityTypes.HEAVY_ARROW.get(), HeavyArrowRenderer::new);
 //        EntityRenderers.register(ModEntityTypes.DECOY_ARROW.get(), DecoyArrowRenderer::new);
 //        EntityRenderers.register(ModEntityTypes.ENDER_PEARL_ARROW.get(), EnderPearlArrowRenderer::new);

@@ -60,11 +60,11 @@ public class ModEntityTypes
                     () -> EntityType.Builder.of((EntityType.EntityFactory<ScatterArrowEntity>) ScatterArrowEntity::new,
                             MobCategory.MISC).sized(0.5F, 0.5F).build("scatter_arrow"));
 
-//    public static final RegistryObject<EntityType<PoisonGasArrowEntity>> POISON_GAS_ARROW =
-//            ENTITY_TYPES.register("poison_gas_arrow",
-//                    () -> EntityType.Builder.of((EntityType.EntityFactory<PoisonGasArrowEntity>) PoisonGasArrowEntity::new,
-//                            MobCategory.MISC).sized(0.5F, 0.5F).build("poison_gas_arrow"));
-//
+    public static final RegistryObject<EntityType<PoisonGasArrowEntity>> POISON_GAS_ARROW =
+            ENTITY_TYPES.register("poison_gas_arrow",
+                    () -> EntityType.Builder.of((EntityType.EntityFactory<PoisonGasArrowEntity>) PoisonGasArrowEntity::new,
+                            MobCategory.MISC).sized(0.5F, 0.5F).build("poison_gas_arrow"));
+
 //    public static final RegistryObject<EntityType<HeavyArrowEntity>> HEAVY_ARROW =
 //            ENTITY_TYPES.register("heavy_arrow",
 //                    () -> EntityType.Builder.of((EntityType.EntityFactory<HeavyArrowEntity>) HeavyArrowEntity::new,
