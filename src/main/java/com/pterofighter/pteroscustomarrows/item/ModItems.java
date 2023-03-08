@@ -30,9 +30,9 @@ public class ModItems
     public static final RegistryObject<Item> BLACK_HOLE_ARROW = ITEMS.register( "black_hole_arrow",
             () -> new BlackHoleArrowItem(new Item.Properties()));
 
-//    public static final RegistryObject<Item> SEEKING_ARROW = ITEMS.register( "seeking_arrow",
-//            () -> new SeekingArrowItem(new Item.Properties().tab(ModCreativeModeTab.RANDOM_STUFF_TAB)));
-//
+    public static final RegistryObject<Item> SEEKING_ARROW = ITEMS.register( "seeking_arrow",
+            () -> new SeekingArrowItem(new Item.Properties()));
+
 //    public static final RegistryObject<Item> TREE_ARROW = ITEMS.register( "tree_arrow",
 //            () -> new TreeArrowItem(new Item.Properties().tab(ModCreativeModeTab.RANDOM_STUFF_TAB)));
 //
